@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MultipleImageSelectionWithBSImagePicker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="KeM-pi-9Ho">
+                                <rect key="frame" x="34" y="119" width="346" height="98"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pNI-E8-NDd">
+                                        <rect key="frame" x="0.0" y="0.0" width="112" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="112" id="EY1-FT-dgT"/>
+                                            <constraint firstAttribute="height" constant="98" id="aEN-BG-HlR"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="wGv-DG-Pmb">
+                                        <rect key="frame" x="120" y="0.0" width="109" height="98"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="109" id="7ox-XQ-b3I"/>
+                                        </constraints>
+                                    </imageView>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Edy-XN-zUL">
+                                        <rect key="frame" x="237" y="0.0" width="109" height="98"/>
+                                    </imageView>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3k-92-LFx">
+                                <rect key="frame" x="165" y="248" width="84" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="RtS-2J-VPV"/>
+                                </constraints>
+                                <state key="normal" title="Pick Images"/>
+                                <connections>
+                                    <action selector="pickImagesButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Stt-52-RGI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="KeM-pi-9Ho" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="34" id="LQz-eo-2ne"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="KeM-pi-9Ho" secondAttribute="trailing" constant="34" id="YRA-bC-iin"/>
+                            <constraint firstItem="KeM-pi-9Ho" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="75" id="cXc-nG-xph"/>
+                            <constraint firstItem="e3k-92-LFx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="165" id="dte-Ph-dvj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e3k-92-LFx" secondAttribute="trailing" constant="165" id="e6W-9W-Ghr"/>
+                            <constraint firstItem="e3k-92-LFx" firstAttribute="top" secondItem="KeM-pi-9Ho" secondAttribute="bottom" constant="31" id="u9O-2h-9k6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="leftImageView" destination="pNI-E8-NDd" id="XLn-cN-zGL"/>
+                        <outlet property="middleImageView" destination="wGv-DG-Pmb" id="r7X-8a-xio"/>
+                        <outlet property="rightImageView" destination="Edy-XN-zUL" id="yQz-4b-Hs5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="120.53571428571428"/>
+        </scene>
+    </scenes>
+</document>
